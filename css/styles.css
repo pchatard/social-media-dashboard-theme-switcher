@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+:root {
+	/* DARK MODE */
+	--background-dark: hsl(230, 17%, 14%);
+	--background-dark-top: hsl(232, 19%, 15%);
+	--card-background-blue: hsl(228, 28%, 20%);
+	--text-blue: hsl(228, 34%, 66%);
+	--text-white: hsl(0, 0%, 100%);
+
+	/* LIGHT MODE */
+	--background-light: hsl(0, 0%, 100%);
+	--background-top-light: hsl(225, 100%, 98%);
+	--card-background-light: hsl(227, 47%, 96%);
+	--text-dark: hsl(228, 12%, 44%);
+	--text-very-dark: hsl(230, 17%, 14%);
+
+	/* Primary colors */
+	--lime-green: hsl(163, 72%, 41%);
+	--bright-red: hsl(356, 69%, 56%);
+	--facebook: hsl(208, 92%, 53%);
+	--twitter: hsl(203, 89%, 53%);
+	--instagram: linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+	--youtube: hsl(348, 97%, 39%);
+
+	/* Toggle button */
+	--toggle-dark: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+	--toggle-light: hsl(230, 22%, 74%);
+}
+
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: "Inter", sans-serif;
+}
+
+body {
+	font-size: 1.6rem;
+	box-sizing: border-box;
+    height: 100vh;
+	overflow: hidden;
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+    align-items: center;
+    padding: 3rem 10rem 15rem 10rem;
+    border-radius: 0 0 10px 10px;
+    background-color: var(--background-top-light);
+}
+
+h1 {
+    font-weight: 700;
+}
+
+header .theme-toggler {
+    display: flex;
+    align-items: center;
+}
+
+
+main {
+    background-color: var(--background-light);
+}
+
+#theme {
+    display: none;
+}
+
+#theme:checked ~ main {
+	background-color: var(--background-dark);
+}
+
+#theme:checked ~ header {
+    background-color: var(--background-dark-top);
+    box-shadow: 0px 0px 5px 10px var(--background-dark-top);
+}
+
+footer#attribution {
+	position: fixed;
+	bottom: 0;
+}
+
+@media (max-width: 900px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 40%;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .theme-toggler {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
