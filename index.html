@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- displays site properly based on user's device -->
 
 		<link
 			rel="icon"
@@ -26,67 +25,109 @@
 				<h1>Social Media Dashboard</h1>
 				<p class="header__followers">Total Followers: 23,004</p>
 			</div>
-            <div class="theme-toggler">
-                <label for="theme" id="toggle-label"> Dark Mode </label>
-                <input type="checkbox" name="deco" id="deco">
-            </div>
+			<div class="theme-toggler">
+				<label for="theme" id="toggle-label">
+					Dark Mode
+					
+				</label>
+                <div class="toggle__container">
+                    <input
+						type="radio"
+						name="deco"
+						id="deco-dark"
+						value="dark"
+					/>
+					<input
+						type="radio"
+						name="deco"
+						id="deco-light"
+						value="light"
+						checked
+					/>
+                    <label for="deco-dark" id="deco-label-dark"></label>
+                    <label for="deco-light" id="deco-label-dark"></label>
+                </div>
+			</div>
 		</header>
 
 		<main>
 			<section id="accounts__overview">
-				<div class="account__container">
-					<p class="account__username">
-						<img
-							src="images/icon-facebook.svg"
-							alt="Facebook Logo"
-						/>
-						@nathanf
-					</p>
-					<p class="account__followers">1987</p>
-					<p class="account__followers__text">Followers</p>
-					<p class="account__evolution positive">
-						<img src="images/icon-up.svg" alt="Up arrow" />
-						12 Today
-					</p>
+				<div class="bg facebook">
+					<div class="account__container">
+						<p class="account__username">
+							<img
+								src="images/icon-facebook.svg"
+								alt="Facebook Logo"
+							/>
+							@nathanf
+						</p>
+						<div class="account__followers__container">
+							<p class="account__followers">1987</p>
+							<p class="account__followers__text">Followers</p>
+						</div>
+						<p class="account__evolution positive">
+							<img src="images/icon-up.svg" alt="Up arrow" />
+							12 Today
+						</p>
+					</div>
 				</div>
-				<div class="account__container">
-					<p class="account__username">
-						<img src="images/icon-twitter.svg" alt="Twitter Logo" />
-						@nathanf
-					</p>
-					<p class="account__followers">1044</p>
-					<p class="account__followers__text">Followers</p>
-					<p class="account__evolution positive">
-						<img src="images/icon-up.svg" alt="Up arrow" />
-						99 Today
-					</p>
+				<div class="bg twitter">
+					<div class="account__container">
+						<p class="account__username">
+							<img
+								src="images/icon-twitter.svg"
+								alt="Twitter Logo"
+							/>
+							@nathanf
+						</p>
+						<div class="account__followers__container">
+							<p class="account__followers">1044</p>
+							<p class="account__followers__text">Followers</p>
+						</div>
+
+						<p class="account__evolution positive">
+							<img src="images/icon-up.svg" alt="Up arrow" />
+							99 Today
+						</p>
+					</div>
 				</div>
-				<div class="account__container">
-					<p class="account__username">
-						<img
-							src="images/icon-instagram.svg"
-							alt="Instagram Logo"
-						/>
-						@realnathanf
-					</p>
-					<p class="account__followers">11k</p>
-					<p class="account__followers__text">Followers</p>
-					<p class="account__evolution positive">
-						<img src="images/icon-up.svg" alt="Up arrow" />
-						1099 Today
-					</p>
+				<div class="bg instagram">
+					<div class="account__container">
+						<p class="account__username">
+							<img
+								src="images/icon-instagram.svg"
+								alt="Instagram Logo"
+							/>
+							@realnathanf
+						</p>
+						<div class="account__followers__container">
+							<p class="account__followers">11k</p>
+							<p class="account__followers__text">Followers</p>
+						</div>
+						<p class="account__evolution positive">
+							<img src="images/icon-up.svg" alt="Up arrow" />
+							1099 Today
+						</p>
+					</div>
 				</div>
-				<div class="account__container">
-					<p class="account__username">
-						<img src="images/icon-youtube.svg" alt="YouTube Logo" />
-						Nathan F.
-					</p>
-					<p class="account__followers">8239</p>
-					<p class="account__followers__text">Followers</p>
-					<p class="account__evolution negative">
-						<img src="images/icon-down.svg" alt="Down arrow" />
-						144 Today
-					</p>
+				<div class="bg youtube">
+					<div class="account__container">
+						<p class="account__username">
+							<img
+								src="images/icon-youtube.svg"
+								alt="YouTube Logo"
+							/>
+							Nathan F.
+						</p>
+						<div class="account__followers__container">
+							<p class="account__followers">8239</p>
+							<p class="account__followers__text">Subscribers</p>
+						</div>
+						<p class="account__evolution negative">
+							<img src="images/icon-down.svg" alt="Down arrow" />
+							144 Today
+						</p>
+					</div>
 				</div>
 			</section>
 
@@ -101,7 +142,7 @@
 							alt="Facebook Logo"
 						/>
 						<p class="stat__number">87</p>
-						<p class="stat__evolution">
+						<p class="stat__evolution positive">
 							<img src="images/icon-up.svg" alt="Up arrow" />
 							3%
 						</p>
@@ -113,7 +154,7 @@
 							alt="Facebook Logo"
 						/>
 						<p class="stat__number">52</p>
-						<p class="stat__evolution">
+						<p class="stat__evolution negative">
 							<img src="images/icon-down.svg" alt="Down arrow" />
 							2%
 						</p>
@@ -125,7 +166,7 @@
 							alt="Instagram Logo"
 						/>
 						<p class="stat__number">5462</p>
-						<p class="stat__evolution">
+						<p class="stat__evolution positive">
 							<img src="images/icon-up.svg" alt="Up arrow" />
 							2257%
 						</p>
@@ -137,7 +178,7 @@
 							alt="Instagram Logo"
 						/>
 						<p class="stat__number">52k</p>
-						<p class="stat__evolution">
+						<p class="stat__evolution positive">
 							<img src="images/icon-up.svg" alt="Up arrow" />
 							1375%
 						</p>
@@ -146,7 +187,7 @@
 						<p class="stat__type">Retweets</p>
 						<img src="images/icon-twitter.svg" alt="Twitter Logo" />
 						<p class="stat__number">117</p>
-						<p class="stat__evolution">
+						<p class="stat__evolution positive">
 							<img src="images/icon-up.svg" alt="Up arrow" /> 303%
 						</p>
 					</div>
@@ -154,7 +195,7 @@
 						<p class="stat__type">Likes</p>
 						<img src="images/icon-twitter.svg" alt="Twitter Logo" />
 						<p class="stat__number">507</p>
-						<p class="stat__evolution">
+						<p class="stat__evolution positive">
 							<img src="images/icon-up.svg" alt="Up arrow" /> 553%
 						</p>
 					</div>
@@ -162,7 +203,7 @@
 						<p class="stat__type">Likes</p>
 						<img src="images/icon-youtube.svg" alt="YouTube Logo" />
 						<p class="stat__number">107</p>
-						<p class="stat__evolution">
+						<p class="stat__evolution negative">
 							<img src="images/icon-down.svg" alt="Down arrow" />
 							19%
 						</p>
@@ -171,7 +212,7 @@
 						<p class="stat__type">Total Views</p>
 						<img src="images/icon-youtube.svg" alt="YouTube Logo" />
 						<p class="stat__number">1407</p>
-						<p class="stat__evolution">
+						<p class="stat__evolution negative">
 							<img src="images/icon-down.svg" alt="Down arrow" />
 							12%
 						</p>
