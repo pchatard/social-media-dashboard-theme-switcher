@@ -52,11 +52,17 @@ body {
 	box-sizing: border-box;
 }
 
-header {
+.container-header {
+	margin: 0 auto;
+	max-width: 140rem;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+}
+
+header {
+	/* margin: 0 auto; */
 	padding: 3rem 12rem 15rem 12rem;
 	border-radius: 0 0 10px 10px;
 	background-color: var(--background-top-light);
@@ -116,13 +122,18 @@ header .theme-toggler {
 	transition: all 0.2s;
 }
 
-main {
-	position: relative;
-	height: 100%;
+.container-main {
+	max-width: 140rem;
+	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: stretch;
 	align-items: stretch;
+	position: relative;
+}
+
+main {
+	height: 75vh;
 }
 
 #accounts__overview {
@@ -140,6 +151,7 @@ main {
 	padding-top: 4px;
 	border-radius: 3px;
 	overflow: hidden;
+	min-width: 20rem;
 }
 
 .facebook {
@@ -240,6 +252,7 @@ h2 {
 }
 
 .stat__container {
+	min-width: 20rem;
 	background: var(--card-background-light);
 	cursor: pointer;
 	display: grid;
@@ -347,13 +360,35 @@ a {
 	color: inherit;
 }
 
+footer#attribution {
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+}
+
+footer a {
+	text-decoration: none;
+	color: blue;
+}
+
 @media (max-width: 900px) {
 	html {
 		font-size: 50%;
 	}
+
+	main {
+		height: auto;
+	}
+
+	footer#attribution {
+		width: 100%;
+		text-align: center;
+		position: static;
+	}
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
 	html {
 		font-size: 40%;
 	}
@@ -363,9 +398,12 @@ a {
 		overflow: auto;
 	}
 
-	header {
+	.container-header {
 		flex-direction: column;
 		align-items: flex-start;
+	}
+
+	header {
 		padding: 3rem 3rem 15rem 3rem;
 	}
 
